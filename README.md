@@ -1,4 +1,4 @@
-# Infiniti
+# INFINITI
 
 This repository serves as a default fallback when a given make does not have its own signalset definitions. It contains generic signal configurations that can be adapted for various Infiniti models when specific model configurations are not available.
 

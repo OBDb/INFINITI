@@ -28,6 +28,10 @@
   "signals": [
     {"id": "INFINITI_BRAKE_MC_P", "path": "Control", "fmt": { "len": 16, "max": 42666.015, "div": 1.536, "unit": "unknown" }, "name": "Brake master cylinder pressure"}
   ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 30,
+  "signals": [
+    {"id": "INFINITI_ODO_METER", "path": "Trips", "fmt": {"bix": 64, "len": 16, "max": 65535, "unit": "kilometers" }, "name": "Odometer, meter group 1"}
+  ]},
 { "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "0E01"}, "freq": 1,
   "signals": [
     {"id": "INFINITI_ODO", "path": "Trips", "fmt": { "len": 24, "max": 16777215, "unit": "miles" }, "name": "Odometer", "suggestedMetric": "odometer"}
@@ -48,9 +52,13 @@
   "signals": [
     {"id": "INFINITI_TP_RL_V2", "path": "Tires", "fmt": { "len": 8, "max": 439.5, "mul": 1.7236894, "unit": "kilopascal" }, "name": "Rear left tire pressure", "suggestedMetric": "rearLeftTirePressure"}
   ]},
+{ "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "0E2D"}, "freq": 30,
+  "signals": [
+    {"id": "INFINITI_SOC_DASH", "path": "Battery", "fmt": {"bix": 112, "len": 8, "max": 100, "unit": "percent" }, "name": "State of charge, as the dash shows it", "suggestedMetric": "stateOfCharge"}
+  ]},
 { "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "0E2E"}, "freq": 1,
   "signals": [
-    {"id": "INFINITI_RANGE", "path": "Trips", "fmt": { "len": 16, "max": 6553.5, "unit": "kilometers" }, "name": "Range remaining", "suggestedMetric": "electricRange"}
+    {"id": "INFINITI_RANGE", "path": "Trips", "fmt": { "len": 16, "max": 2047, "nullmin": 0, "nullmax": 2047, "unit": "kilometers" }, "name": "Range remaining", "suggestedMetric": "electricRange"}
   ]},
 { "hdr": "744", "dbg": true, "cmd": {"22": "4007"}, "freq": 1,
   "signals": [
@@ -344,7 +352,7 @@
     {"id": "INFINITI_HVBAT_CELL_94_V", "path": "Battery.Cells", "fmt": {"bix": 1488, "len": 16, "max": 65.535, "div": 1000, "unit": "volts" }, "name": "HV battery cell 94 voltage"},
     {"id": "INFINITI_HVBAT_CELL_95_V", "path": "Battery.Cells", "fmt": {"bix": 1504, "len": 16, "max": 65.535, "div": 1000, "unit": "volts" }, "name": "HV battery cell 95 voltage"},
     {"id": "INFINITI_HVBAT_CELL_96_V", "path": "Battery.Cells", "fmt": {"bix": 1520, "len": 16, "max": 65.535, "div": 1000, "unit": "volts" }, "name": "HV battery cell 96 voltage"},
-    {"id": "INFINITI_HVBAT_PACK_V",    "path": "Battery",       "fmt": {"bix": 1536, "len": 16, "max": 655.35, "div": 100,  "unit": "volts" }, "name": "HV battery pack voltage"},
+    {"id": "INFINITI_HVBAT_PACK_V",    "path": "Battery",       "fmt": {"bix": 1536, "len": 16, "max": 655.35, "div": 100,  "unit": "volts" }, "name": "HV battery pack voltage",    "suggestedMetric": "tractionBatteryVoltage"},
     {"id": "INFINITI_HVBAT_BUS_V",     "path": "Battery",       "fmt": {"bix": 1552, "len": 16, "max": 655.35, "div": 100,  "unit": "volts" }, "name": "HV bus voltage"}
   ]},
 { "hdr": "79B", "rax": "7BB", "dbg": true, "cmd": {"21": "04"}, "freq": 30,

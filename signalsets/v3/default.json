@@ -1,22 +1,22 @@
 { "commands": [
-{ "hdr": "707", "rax": "727", "dbg": true, "cmd": {"22": "0103"}, "freq": 0.1,
+{ "hdr": "707", "rax": "727", "dbg": true, "cmd": {"22": "0103"}, "freq": 0.25,
   "signals": [
     {"id": "INFINITI_TURN_SIGNAL_RIGHT", "path": "Control", "fmt": {          "len": 1, "max": 1, "unit": "offon" }, "name": "Right turn signal"},
     {"id": "INFINITI_TURN_SIGNAL_LEFT",  "path": "Control", "fmt": {"bix": 1, "len": 1, "max": 1, "unit": "offon" }, "name": "Left turn signal"}
   ]},
-{ "hdr": "723", "rax": "735", "dbg": true, "cmd": {"22": "0101"}, "freq": 0.1,
+{ "hdr": "723", "rax": "735", "dbg": true, "cmd": {"22": "0101"}, "freq": 0.25,
   "signals": [
     {"id": "INFINITI_YAW_RATE", "path": "Control", "fmt": { "len": 16, "max": 3276.7, "min": -3276.8, "div": 10, "sign": true, "unit": "degrees" }, "name": "Yaw rate"}
   ]},
-{ "hdr": "723", "rax": "735", "dbg": true, "cmd": {"22": "0107"}, "freq": 0.1,
+{ "hdr": "723", "rax": "735", "dbg": true, "cmd": {"22": "0107"}, "freq": 0.25,
   "signals": [
     {"id": "INFINITI_RADAR_DISTANCE", "path": "Cruise control", "fmt": { "len": 16, "max": 6553.5, "div": 10, "unit": "meters" }, "name": "Radar distance"}
   ]},
-{ "hdr": "723", "rax": "735", "dbg": true, "cmd": {"22": "0108"}, "freq": 0.1,
+{ "hdr": "723", "rax": "735", "dbg": true, "cmd": {"22": "0108"}, "freq": 0.25,
   "signals": [
     {"id": "INFINITI_RADAR_SPEED", "path": "Cruise control", "fmt": { "len": 16, "max": 3276.7, "min": -3276.8, "div": 10, "sign": true, "unit": "metersPerSecond" }, "name": "Relative speed"}
   ]},
-{ "hdr": "723", "rax": "735", "dbg": true, "cmd": {"22": "0110"}, "freq": 0.1,
+{ "hdr": "723", "rax": "735", "dbg": true, "cmd": {"22": "0110"}, "freq": 0.25,
   "signals": [
     {"id": "INFINITI_STEER_ANGLE", "path": "Control", "fmt": { "len": 16, "max": 3276.7, "min": -3276.8, "div": 10, "sign": true, "unit": "degrees" }, "name": "Steering wheel angle", "description": "Negative values are clockwise, positive values are counter-clockwise."}
   ]},
@@ -32,25 +32,25 @@
   "signals": [
     {"id": "INFINITI_ODO_METER", "path": "Trips", "fmt": {"bix": 64, "len": 16, "max": 65535, "unit": "kilometers" }, "name": "Odometer, meter group 1"}
   ]},
-{ "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "0E01"}, "freq": 1,
+{ "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "0E01"}, "freq": 30,
   "signals": [
     {"id": "INFINITI_ODO", "path": "Trips", "fmt": { "len": 24, "max": 16777215, "unit": "miles" }, "name": "Odometer", "suggestedMetric": "odometer"}
   ]},
 { "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "0E25"}, "freq": 15,
   "signals": [
-    {"id": "INFINITI_TP_FR_V2", "path": "Tires", "fmt": { "len": 8, "max": 439.5, "mul": 1.7236894, "unit": "kilopascal" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"}
+    {"id": "INFINITI_TP_FR", "path": "Tires", "fmt": { "len": 8, "max": 439.5, "mul": 1.7236894, "nullmin": 0, "unit": "kilopascal" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"}
   ]},
 { "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "0E26"}, "freq": 15,
   "signals": [
-    {"id": "INFINITI_TP_FL_V2", "path": "Tires", "fmt": { "len": 8, "max": 439.5, "mul": 1.7236894, "unit": "kilopascal" }, "name": "Front left tire pressure", "suggestedMetric": "frontLeftTirePressure"}
+    {"id": "INFINITI_TP_FL", "path": "Tires", "fmt": { "len": 8, "max": 439.5, "mul": 1.7236894, "nullmin": 0, "unit": "kilopascal" }, "name": "Front left tire pressure", "suggestedMetric": "frontLeftTirePressure"}
   ]},
 { "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "0E27"}, "freq": 15,
   "signals": [
-    {"id": "INFINITI_TP_RR_V2", "path": "Tires", "fmt": { "len": 8, "max": 439.5, "mul": 1.7236894, "unit": "kilopascal" }, "name": "Rear right tire pressure", "suggestedMetric": "rearRightTirePressure"}
+    {"id": "INFINITI_TP_RR", "path": "Tires", "fmt": { "len": 8, "max": 439.5, "mul": 1.7236894, "nullmin": 0, "unit": "kilopascal" }, "name": "Rear right tire pressure", "suggestedMetric": "rearRightTirePressure"}
   ]},
 { "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "0E28"}, "freq": 15,
   "signals": [
-    {"id": "INFINITI_TP_RL_V2", "path": "Tires", "fmt": { "len": 8, "max": 439.5, "mul": 1.7236894, "unit": "kilopascal" }, "name": "Rear left tire pressure", "suggestedMetric": "rearLeftTirePressure"}
+    {"id": "INFINITI_TP_RL", "path": "Tires", "fmt": { "len": 8, "max": 439.5, "mul": 1.7236894, "nullmin": 0, "unit": "kilopascal" }, "name": "Rear left tire pressure", "suggestedMetric": "rearLeftTirePressure"}
   ]},
 { "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "0E2D"}, "freq": 30,
   "signals": [
@@ -60,17 +60,17 @@
   "signals": [
     {"id": "INFINITI_RANGE", "path": "Trips", "fmt": { "len": 16, "max": 2047, "nullmin": 0, "nullmax": 2047, "unit": "kilometers" }, "name": "Range remaining", "suggestedMetric": "electricRange"}
   ]},
-{ "hdr": "744", "dbg": true, "cmd": {"22": "4007"}, "freq": 1,
+{ "hdr": "744", "dbg": true, "cmd": {"22": "4007"}, "freq": 5,
   "signals": [
-    {"id": "INFINITI_AC_STATUS", "path": "Climate", "fmt": { "len": 8, "max": 255, "unit": "offon" }, "name": "A/C status"}
+    {"id": "INFINITI_AC_STATUS", "path": "Climate", "fmt": { "len": 8, "max": 255, "unit": "offon" }, "name": "Air conditioning status"}
   ]},
-{ "hdr": "744", "dbg": true, "cmd": {"22": "4008"}, "freq": 1,
+{ "hdr": "744", "dbg": true, "cmd": {"22": "4008"}, "freq": 5,
   "signals": [
     {"id": "INFINITI_AAT", "path": "Climate", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Ambient air temperature"}
   ]},
-{ "hdr": "744", "dbg": true, "cmd": {"22": "F467"}, "freq": 1,
+{ "hdr": "744", "dbg": true, "cmd": {"22": "F467"}, "freq": 5,
   "signals": [
-    {"id": "INFINITI_ECT", "path": "Climate", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Engine coolant temperature"}
+    {"id": "INFINITI_ECT", "path": "Climate", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Engine coolant temperature", "suggestedMetric": "engineCoolantTemperature"}
   ]},
 { "hdr": "744", "rax": "764", "dbg": true, "cmd": {"21": "10"}, "freq": 5,
   "signals": [
@@ -83,35 +83,42 @@
     {"id": "INFINITI_HVAC_BLOWER_V", "path": "Climate", "fmt": {"bix": 89,  "len": 7,  "max": 127,                           "unit": "volts"   }, "name": "Blower voltage"},
     {"id": "INFINITI_AC_COMP_RPM",   "path": "Climate", "fmt": {"bix": 168, "len": 16, "max": 65535,                         "unit": "rpm"     }, "name": "Air conditioning compressor speed"}
   ]},
-{ "hdr": "758", "rax": "778", "dbg": true, "cmd": {"22": "0201"}, "freq": 5,
+{ "hdr": "758", "rax": "778", "fcm1": true, "din": "C0", "dout": "81", "dbg": true, "cmd": {"21": "10"}, "freq": 15,
   "signals": [
-    {"id": "INFINITI_TP_FL", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Front left tire pressure", "suggestedMetric": "frontLeftTirePressure"}
+    {"id": "INFINITI_WHL_1_P", "path": "Tires", "fmt": {"bix": 16, "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Wheel 1 pressure"},
+    {"id": "INFINITI_WHL_2_P", "path": "Tires", "fmt": {"bix": 24, "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Wheel 2 pressure"},
+    {"id": "INFINITI_WHL_3_P", "path": "Tires", "fmt": {"bix": 32, "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Wheel 3 pressure"},
+    {"id": "INFINITI_WHL_4_P", "path": "Tires", "fmt": {"bix": 40, "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Wheel 4 pressure"}
   ]},
-{ "hdr": "758", "rax": "778", "dbg": true, "cmd": {"22": "0202"}, "freq": 5,
+{ "hdr": "758", "rax": "778", "dbg": true, "cmd": {"22": "0201"}, "freq": 15,
   "signals": [
-    {"id": "INFINITI_TP_FR", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"}
+    {"id": "INFINITI_FL_TIRE_P", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Front left tire pressure", "suggestedMetric": "frontLeftTirePressure"}
   ]},
-{ "hdr": "758", "rax": "778", "dbg": true, "cmd": {"22": "0203"}, "freq": 5,
+{ "hdr": "758", "rax": "778", "dbg": true, "cmd": {"22": "0202"}, "freq": 15,
   "signals": [
-    {"id": "INFINITI_TP_RR", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Rear right tire pressure", "suggestedMetric": "rearRightTirePressure"}
+    {"id": "INFINITI_FR_TIRE_P", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Front right tire pressure", "suggestedMetric": "frontRightTirePressure"}
   ]},
-{ "hdr": "758", "rax": "778", "dbg": true, "cmd": {"22": "0204"}, "freq": 5,
+{ "hdr": "758", "rax": "778", "dbg": true, "cmd": {"22": "0203"}, "freq": 15,
   "signals": [
-    {"id": "INFINITI_TP_RL", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Rear left tire pressure", "suggestedMetric": "rearLeftTirePressure"}
+    {"id": "INFINITI_RR_TIRE_P", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Rear right tire pressure", "suggestedMetric": "rearRightTirePressure"}
   ]},
-{ "hdr": "758", "rax": "778", "dbg": true, "cmd": {"22": "020D"}, "freq": 5,
+{ "hdr": "758", "rax": "778", "dbg": true, "cmd": {"22": "0204"}, "freq": 15,
+  "signals": [
+    {"id": "INFINITI_RL_TIRE_P", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Rear left tire pressure", "suggestedMetric": "rearLeftTirePressure"}
+  ]},
+{ "hdr": "758", "rax": "778", "dbg": true, "cmd": {"22": "020D"}, "freq": 15,
   "signals": [
     {"id": "INFINITI_TPW_FL", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Front left tire pressure, warning"}
   ]},
-{ "hdr": "758", "rax": "778", "dbg": true, "cmd": {"22": "020E"}, "freq": 5,
+{ "hdr": "758", "rax": "778", "dbg": true, "cmd": {"22": "020E"}, "freq": 15,
   "signals": [
     {"id": "INFINITI_TPW_FR", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Front right tire pressure, warning"}
   ]},
-{ "hdr": "758", "rax": "778", "dbg": true, "cmd": {"22": "020F"}, "freq": 5,
+{ "hdr": "758", "rax": "778", "dbg": true, "cmd": {"22": "020F"}, "freq": 15,
   "signals": [
     {"id": "INFINITI_TPW_RR", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Rear right tire pressure, warning"}
   ]},
-{ "hdr": "758", "rax": "778", "dbg": true, "cmd": {"22": "0210"}, "freq": 5,
+{ "hdr": "758", "rax": "778", "dbg": true, "cmd": {"22": "0210"}, "freq": 15,
   "signals": [
     {"id": "INFINITI_TPW_RL", "path": "Tires", "fmt": { "len": 8, "max": 63.75, "div": 4, "unit": "psi" }, "name": "Rear left tire pressure, warning"}
   ]},
@@ -378,6 +385,14 @@
 { "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "122B"}, "freq": 30,
   "signals": [
     {"id": "INFINITI_CC_S", "path": "Cruise control", "fmt": { "len": 16, "max": 255, "unit": "scalar" }, "name": "Cruise control speed"}
+  ]},
+{ "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"21": "01"}, "freq": 5,
+  "signals": [
+    {"id": "INFINITI_OUTPUT_SPD",   "path": "Movement",     "fmt": {"bix": 40,  "len": 16, "max": 65535,                                             "unit": "rpm"        }, "name": "Output speed"},
+    {"id": "INFINITI_TURBINE_SPD",  "path": "Movement",     "fmt": {"bix": 56,  "len": 16, "max": 65535,                                             "unit": "rpm"        }, "name": "Turbine speed"},
+    {"id": "INFINITI_TQ_CONV_SLIP", "path": "Transmission", "fmt": {"bix": 120, "len": 16, "max": 65535,                                             "unit": "rpm"        }, "name": "Torque converter slip"},
+    {"id": "INFINITI_ATF_T_VAR_1",  "path": "Transmission", "fmt": {"bix": 152, "len": 8,  "max": 392,   "min": -67, "mul": 9, "div": 5, "add": -67, "unit": "fahrenheit" }, "name": "Transmission fluid temperature, variant 1"},
+    {"id": "INFINITI_ATF_T_VAR_2",  "path": "Transmission", "fmt": {"bix": 160, "len": 8,  "max": 392,   "min": -67, "mul": 9, "div": 5, "add": -67, "unit": "fahrenheit" }, "name": "Transmission fluid temperature, variant 2"}
   ]}
 ]
 }

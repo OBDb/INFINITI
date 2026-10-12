@@ -265,6 +265,10 @@
   "signals": [
     {"id": "INFINITI_AUX_PWR", "path": "Battery.Draw", "fmt": { "len": 8, "max": 25500, "mul": 100, "unit": "watts" }, "name": "Power used by auxiliary equipment (lights, radio, navigation, rear defroster, etc...)."}
   ]},
+{ "hdr": "797", "rax": "79A", "fcm1": true, "dbg": true, "cmd": {"22": "1155"}, "freq": 30,
+  "signals": [
+    {"id": "INFINITI_RANGE_DISP", "path": "Trips", "fmt": { "len": 16, "max": 6553.5, "div": 10, "unit": "kilometers" }, "name": "Range shown on the display", "suggestedMetric": "fuelRange"}
+  ]},
 { "hdr": "797", "rax": "79A", "fcm1": true, "dbg": true, "cmd": {"22": "1156"}, "freq": 1,
   "signals": [
     {"id": "INFINITI_GEAR", "path": "Engine", "name": "Gear", "fmt": {"len": 8, "map": {
@@ -502,25 +506,25 @@
   "signals": [
     {"id": "INFINITI_VPWR_ECM", "path": "Battery", "fmt": { "len": 8, "max": 20.4, "mul": 0.08, "unit": "volts" }, "name": "Battery voltage, engine module"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "110A"}, "freq": 1,
+{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dbg": true, "cmd": {"22": "110A"}, "freq": 1,
   "signals": [
     {"id": "INFINITI_IGN_TIM_ADVANCE", "path": "Engine", "fmt": { "len": 8, "max": 110, "min": -145, "mul": -1, "add": 110, "unit": "degrees" }, "name": "Ignition timing advance"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1110"}, "freq": 1,
+{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dbg": true, "cmd": {"22": "1110"}, "freq": 1,
   "signals": [
     {"id": "INFINITI_EVAP_PURGE_DUTY", "path": "Engine", "fmt": { "len": 8, "max": 127, "div": 2, "unit": "percent" }, "name": "EVAP purge duty"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1111"}, "freq": 5,
+{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dbg": true, "cmd": {"22": "1111"}, "freq": 5,
   "signals": [
-    {"id": "INFINITI_FUEL_T", "path": "Fuel", "fmt": { "len": 8, "max": 205, "min": -50, "add": -50, "unit": "celsius" }, "name": "Fuel temperature"}
+    {"id": "INFINITI_FUEL_T_7E0", "path": "Fuel", "fmt": { "len": 8, "max": 205, "min": -50, "add": -50, "unit": "celsius" }, "name": "Fuel temperature"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "111F"}, "freq": 5,
   "signals": [
     {"id": "INFINITI_VARIABLE_VLV_TIM_OIL_T", "path": "Engine", "fmt": { "len": 8, "max": 205, "min": -50, "add": -50, "unit": "celsius" }, "name": "Variable valve timing oil temperature"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1123"}, "freq": 1,
+{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dbg": true, "cmd": {"22": "1123"}, "freq": 1,
   "signals": [
-    {"id": "INFINITI_F_RAT_ADJ_B1", "path": "Engine", "fmt": { "len": 8, "max": 155, "min": -100, "add": -100, "unit": "percent" }, "name": "A/F ratio adj, B1"}
+    {"id": "INFINITI_F_RAT_ADJ", "path": "Engine", "fmt": { "len": 8, "max": 155, "min": -100, "add": -100, "unit": "percent" }, "name": "A/F ratio adj"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1124"}, "freq": 1,
   "signals": [
@@ -530,17 +534,17 @@
   "signals": [
     {"id": "INFINITI_MANIFOLD_P_SENS_V", "path": "Battery", "fmt": { "len": 8, "max": 5.1, "div": 50, "unit": "volts" }, "name": "Manifold pressure sensor voltage"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1135"}, "freq": 1,
+{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dbg": true, "cmd": {"22": "1135"}, "freq": 1,
   "signals": [
-    {"id": "INFINITI_CAM_ADV_ANG_B1", "path": "Engine", "fmt": { "len": 8, "max": 63.5, "min": -64, "div": 2, "add": -64, "unit": "degrees" }, "name": "Camshaft adv angle, B1"}
+    {"id": "INFINITI_CAM_ADV_ANG", "path": "Engine", "fmt": { "len": 8, "max": 63.5, "min": -64, "div": 2, "add": -64, "unit": "degrees" }, "name": "Camshaft adv angle"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1137"}, "freq": 1,
   "signals": [
     {"id": "INFINITI_CAM_ADV_B2", "path": "Engine", "fmt": { "len": 8, "max": 63.5, "min": -64, "div": 2, "add": -64, "unit": "degrees" }, "name": "Intake camshaft advance, bank 2"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1138"}, "freq": 1,
+{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dbg": true, "cmd": {"22": "1138"}, "freq": 1,
   "signals": [
-    {"id": "INFINITI_CAM_VLV_DUTY_B1", "path": "Engine", "fmt": { "len": 8, "max": 99.6, "mul": 25, "div": 64, "unit": "percent" }, "name": "Camshaft valve duty, B1"}
+    {"id": "INFINITI_CAM_VLV_DUTY", "path": "Engine", "fmt": { "len": 8, "max": 99.6, "mul": 25, "div": 64, "unit": "percent" }, "name": "Camshaft valve duty"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1139"}, "freq": 1,
   "signals": [
@@ -554,23 +558,23 @@
   "signals": [
     {"id": "INFINITI_REMAINING_FUEL", "path": "Fuel", "fmt": { "len": 8, "max": 255, "unit": "liters" }, "name": "Remaining fuel"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1201"}, "freq": 0.25,
+{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dbg": true, "cmd": {"22": "1201"}, "freq": 0.25,
   "signals": [
     {"id": "INFINITI_CURRENT_RPM", "path": "Movement", "fmt": { "len": 16, "max": 819187, "mul": 25, "div": 2, "unit": "rpm" }, "name": "Current engine speed"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1204"}, "freq": 1,
+{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dbg": true, "cmd": {"22": "1204"}, "freq": 1,
   "signals": [
-    {"id": "INFINITI_MAF_VOLTS_B1", "path": "Battery", "fmt": { "len": 16, "max": 327, "div": 200, "unit": "volts" }, "name": "Mass air flow volts, B1"}
+    {"id": "INFINITI_MAF_VOLTS", "path": "Battery", "fmt": { "len": 16, "max": 327, "div": 200, "unit": "volts" }, "name": "Mass air flow volts"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1205"}, "freq": 1,
   "signals": [
     {"id": "INFINITI_MAF_V_B2", "path": "Engine", "fmt": { "len": 16, "max": 327, "div": 200, "unit": "volts" }, "name": "Mass air flow sensor voltage, bank 2"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1208"}, "freq": 1,
+{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dbg": true, "cmd": {"22": "1208"}, "freq": 1,
   "signals": [
     {"id": "INFINITI_FUEL_BASE_WIDTH", "path": "Fuel", "fmt": { "len": 16, "max": 31.99, "div": 2048, "unit": "milliseconds" }, "name": "Fuel base pulse width"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "1209"}, "freq": 1,
+{ "hdr": "7E0", "rax": "7E8", "din": "C0", "dbg": true, "cmd": {"22": "1209"}, "freq": 1,
   "signals": [
     {"id": "INFINITI_MAF", "path": "Engine", "fmt": { "len": 16, "max": 655, "div": 100, "unit": "gramsPerSecond" }, "name": "Mass air flow"}
   ]},
@@ -732,11 +736,13 @@
   ]},
 { "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "110A"}, "freq": 1,
   "signals": [
-    {"id": "INFINITI_TCM_SEC_P", "path": "Transmission", "fmt": { "len": 16, "max": 1638375, "mul": 25, "unit": "kilopascal" }, "name": "Secondary pulley pressure"}
+    {"id": "INFINITI_TCM_SEC_P_RAW", "path": "Transmission", "fmt": { "len": 8,  "max": 255,                "unit": "scalar"     }, "name": "Secondary pulley pressure count"},
+    {"id": "INFINITI_TCM_SEC_P",     "path": "Transmission", "fmt": { "len": 16, "max": 1638375, "mul": 25, "unit": "kilopascal" }, "name": "Secondary pulley pressure"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "110B"}, "freq": 1,
   "signals": [
-    {"id": "INFINITI_TCM_PRI_P", "path": "Transmission", "fmt": { "len": 16, "max": 1638375, "mul": 25, "unit": "kilopascal" }, "name": "Primary pulley pressure"}
+    {"id": "INFINITI_TCM_PRI_P_RAW", "path": "Transmission", "fmt": { "len": 8,  "max": 255,                "unit": "scalar"     }, "name": "Primary pulley pressure count"},
+    {"id": "INFINITI_TCM_PRI_P",     "path": "Transmission", "fmt": { "len": 16, "max": 1638375, "mul": 25, "unit": "kilopascal" }, "name": "Primary pulley pressure"}
   ]},
 { "hdr": "7E1", "rax": "7E9", "din": "C0", "dout": "81", "dbg": true, "cmd": {"22": "110C"}, "freq": 5,
   "signals": [
@@ -1012,7 +1018,7 @@
   ]},
 { "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "1111"}, "freq": 5,
   "signals": [
-    {"id": "INFINITI_FUEL_T_V2", "path": "Fuel", "fmt": { "len": 8, "max": 205, "min": -50, "add": -50, "unit": "celsius" }, "name": "Fuel temperature"}
+    {"id": "INFINITI_FUEL_T", "path": "Fuel", "fmt": { "len": 8, "max": 205, "min": -50, "add": -50, "unit": "celsius" }, "name": "Fuel temperature"}
   ]},
 { "hdr": "DA18", "rax": "18", "dbg": true, "cmd": {"22": "1114"}, "freq": 30,
   "signals": [

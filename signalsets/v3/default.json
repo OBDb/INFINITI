@@ -59,7 +59,8 @@
 { "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"21": "01"}, "freq": 30,
   "signals": [
     {"id": "INFINITI_MTR_ODO",   "path": "Trips", "fmt": {"bix": 56, "len": 24, "max": 16777215, "unit": "kilometers" }, "name": "Odometer, meter group 1", "suggestedMetric": "odometer"},
-    {"id": "INFINITI_ODO_METER", "path": "Trips", "fmt": {"bix": 56, "len": 24, "max": 16777215, "unit": "kilometers" }, "name": "Odometer, meter group 1"}
+    {"id": "INFINITI_ODO_METER", "path": "Trips", "fmt": {"bix": 56, "len": 24, "max": 16777215, "unit": "kilometers" }, "name": "Odometer, meter group 1"},
+    {"id": "INFINITI_ODO",       "path": "Trips", "fmt": {"bix": 56, "len": 24, "max": 16777215, "unit": "miles"      }, "name": "Odometer",                "suggestedMetric": "odometer"}
   ]},
 { "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "0E00"}, "freq": 0.25,
   "signals": [
@@ -67,7 +68,7 @@
   ]},
 { "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "0E01"}, "freq": 1,
   "signals": [
-    {"id": "INFINITI_ODO",     "path": "Trips", "fmt": { "len": 24, "max": 16777215, "unit": "miles"      }, "name": "Odometer", "suggestedMetric": "odometer"},
+    {"id": "INFINITI_ODO_V2",  "path": "Trips", "fmt": { "len": 24, "max": 16777215, "unit": "miles"      }, "name": "Odometer", "suggestedMetric": "odometer"},
     {"id": "INFINITI_ODO_F16", "path": "Trips", "fmt": { "len": 24, "max": 16777215, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
   ]},
 { "hdr": "743", "rax": "763", "fcm1": true, "dbg": true, "cmd": {"22": "0E03"}, "freq": 1,
